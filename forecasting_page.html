@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demand Forecasting | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f8fafc, #e0f2fe);
+      color: #1e293b;
+    }
+    header {
+      background: #1d4ed8;
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    h2 {
+      color: #1e40af;
+    }
+    .method {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      border: 2px solid #3b82f6;
+    }
+    .method a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background: #2563eb;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back {
+      display: block;
+      margin: 2rem auto 4rem;
+      width: fit-content;
+      padding: 0.6rem 1.2rem;
+      background: #1e3a8a;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📈 Demand Forecasting Methods</h1>
+    <p>Forecast demand using statistical, weighted, and seasonal approaches</p>
+  </header>
+
+  <section>
+    <div class="method">
+      <h2>Last Value Method</h2>
+      <p><strong>Steps:</strong> Use the most recent value as the forecast for the next period.</p>
+      <p><strong>Use Case:</strong> Ideal for short-term, low-variance environments.</p>
+      <p><strong>Example:</strong> Daily milk delivery forecasted using yesterday’s order.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_LastValue_Method.ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Simple Average Method</h2>
+      <p><strong>Steps:</strong> Calculate the average of all past periods.</p>
+      <p><strong>Use Case:</strong> Works well when past demand is stable with no trend.</p>
+      <p><strong>Example:</strong> Grocery sales averaged across past weeks for banana stock planning.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_SimpleAvg_Method.ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Moving Average</h2>
+      <p><strong>Steps:</strong> Use the average of the most recent n periods (rolling average).</p>
+      <p><strong>Use Case:</strong> When demand changes gradually; eliminates older data’s impact.</p>
+      <p><strong>Example:</strong> Weekly pharmacy orders based on previous 3 weeks’ average.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_MovingAvg_Method.ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Weighted Moving Average</h2>
+      <p><strong>Steps:</strong> Assign weights to recent periods (more weight to recent data).</p>
+      <p><strong>Use Case:</strong> Great when recent trends are more relevant than older ones.</p>
+      <p><strong>Example:</strong> Prioritize recent smartphone demand for production planning.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_WtdMovingAvg_Method.ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Exponential Smoothing</h2>
+      <p><strong>Steps:</strong> Apply smoothing using α: Forecast = α×Last + (1−α)×Previous Forecast</p>
+      <p><strong>Use Case:</strong> Common in real-time tracking where noise needs smoothing.</p>
+      <p><strong>Example:</strong> Online food delivery trends smoothed to avoid daily spikes.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_ExpSmoothing_Method.ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Seasonality Index Model</h2>
+      <p><strong>Steps:</strong> Identify average seasonal effect per period and adjust forecast accordingly.</p>
+      <p><strong>Use Case:</strong> When demand follows a regular seasonal pattern.</p>
+      <p><strong>Example:</strong> Winter jackets see 20% rise in demand in December each year.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_Seasonality.ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Holt’s Linear Trend Method</h2>
+      <p><strong>Steps:</strong> Smooth both level and trend; Forecast = Level + Trend×t</p>
+      <p><strong>Use Case:</strong> For data with a consistent upward or downward trend.</p>
+      <p><strong>Example:</strong> Increasing sales of electric scooters used to predict next quarter’s production.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_ConstLevel%2BTrend(Holt).ipynb">GitHub Link</a>
+    </div>
+
+    <div class="method">
+      <h2>Winters Method (Additive Seasonality + Trend)</h2>
+      <p><strong>Steps:</strong> Decompose demand into level, trend, and seasonal components.</p>
+      <p><strong>Use Case:</strong> Best when trend and seasonality both influence demand.</p>
+      <p><strong>Example:</strong> Cold drink sales surge in summer and follow a yearly pattern.</p>
+      <a href="https://github.com/DARAMANOJKUMAR/SCM/blob/main/Forecasting_Level%2BTrend%2BSeasonlity(Winters).ipynb">GitHub Link</a>
+    </div>
+
+    <a href="index.html" class="back">⬅ Back to Homepage</a>
+  </section>
+</body>
+</html>
